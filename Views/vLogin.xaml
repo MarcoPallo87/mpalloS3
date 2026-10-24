@@ -4,12 +4,27 @@
              x:Class="mpalloS3.Views.vLogin"
              Title="vLogin">
 
+    <ContentPage.Resources>
+        <Style x:Key="styleLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="BackgroundColor" Value="LightCyan"/>
+            <Setter Property="TextColor" Value="BlueViolet"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="styleEntry" TargetType="Entry">
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="TextColor" Value="BlueViolet"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+    </ContentPage.Resources>
+
     <ScrollView Orientation="Both">
-        <VerticalStackLayout Padding="25" Spacing="20">
+        <VerticalStackLayout Padding="25" Spacing="20" BackgroundColor="Beige">
 
             <Label 
                 Text="INICIO DE SESION"
-                FontSize="20"
+                Style="{StaticResource styleLabel}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
@@ -36,30 +51,34 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Usuario:"
-                       FontSize="18"
+                       Style="{StaticResource styleLabel}"
                        Grid.Row="0"
                        Grid.Column="0"/>
                 <Entry x:Name="txtUsuario"
+                       Style="{StaticResource styleEntry}"
                        Placeholder="Ingresa el Usuario"
                        Grid.Row="0"
                        Grid.Column="1"/>
 
                 <Label Text="Contraseña:"
-                       FontSize="18"
+                       Style="{StaticResource styleLabel}"
                        Grid.Row="1"
                        Grid.Column="0"/>
                 <Entry x:Name="txtContraseña"
+                       Style="{StaticResource styleEntry}"
                        Placeholder="Ingresa la Contraseña"
                        IsPassword="True"
                        Grid.Row="1"
                        Grid.Column="1"/>
 
                 <Button x:Name="btnIniciarSesion"
+                        Style="{StaticResource BotonGlobal}"
                         Text="Iniciar Sesión"
                         Clicked="btnIniciarSesion_Clicked"
                         Grid.Row="2"
                         Grid.Column="0"/>
                 <Button x:Name="btnRegistrarUsuario"
+                        Style="{StaticResource BotonGlobal}"
                         Text="Registrar Usuario"
                         Clicked="btnRegistrarUsuario_Clicked"
                         Grid.Row="2"

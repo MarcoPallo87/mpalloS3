@@ -3,13 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mpalloS3.Views.vPrincipal"
              Title="vPrincipal">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Chocolate"/>
+            <Setter Property="FontSize" Value="25"/>
+        </Style>
+    </ContentPage.Resources>
+    
     <ScrollView Orientation="Both">
-        <VerticalStackLayout Padding="25" Spacing="20">
-            <Label x:Name="lblUsuario" HorizontalTextAlignment="End"
-                   FontSize="14"/>
+        <VerticalStackLayout Padding="25" Spacing="20" BackgroundColor="Bisque">
+            <Label x:Name="lblUsuario" HorizontalTextAlignment="End"/>
             <Label 
                 Text="Ventana Principal"
-                FontSize="20"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
             <Image Source="sailor2.jpg"
